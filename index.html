@@ -67,7 +67,16 @@
         .text-loading {
             font-size: 3em;
             /*background: linear-gradient(270deg, #573e4e, #aa6b91);*/
-            background: linear-gradient(270deg, #607771, #ca98b6);
+            background: linear-gradient(270deg, #d3bda6, #ca98b6);
+            -webkit-background-clip: text;
+            color: transparent;
+            background-size: 200% 200%;
+            animation: gradient 5s ease infinite;
+        }
+        .text-loading-you {
+            font-size: 3em;
+            /*background: linear-gradient(270deg, #573e4e, #aa6b91);*/
+            background: linear-gradient(270deg, #f66d6d, #ca98b6);
             -webkit-background-clip: text;
             color: transparent;
             background-size: 200% 200%;
@@ -244,7 +253,7 @@
 
             setTimeout(() => {
 
-                document.getElementById("overlay").innerHTML ='<div class="text-loading">爱你呦</div>'
+                document.getElementById("overlay").innerHTML ='<div class="text-loading-you">爱你呦</div>'
 
                 const loader = new THREE.AudioLoader();
                 loader.load(file, function (buffer) {
